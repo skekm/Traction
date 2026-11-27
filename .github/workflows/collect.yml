@@ -2,8 +2,10 @@ name: Collect freight stops
 
 on:
   schedule:
-    - cron: "17 * * * *"   # hourly at :17 (use "17 */2 * * *" for every 2 hours)
-  workflow_dispatch:        # lets you run it manually from the Actions tab
+    - cron: "7,37 * * * *"   # twice an hour, off the busy :00 mark
+  workflow_dispatch:          # manual run from the Actions tab
+  repository_dispatch:        # optional external trigger (cron-job.org etc.)
+    types: [collect]
 
 # Only one run at a time, so two runs never write stops.json together
 concurrency:
@@ -11,7 +13,7 @@ concurrency:
   cancel-in-progress: false
 
 permissions:
-  contents: write           # needed to push the updated stops.json
+  contents: write             # needed to push the updated stops.json
 
 jobs:
   collect:
