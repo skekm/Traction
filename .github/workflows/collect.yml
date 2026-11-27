@@ -2,7 +2,7 @@ name: Collect freight stops
 
 on:
   schedule:
-    - cron: "7,37 * * * *"   # backup + self-revival if the chain ever breaks
+    - cron: "7 */2 * * *"    # every 2 hours at :07 UTC (backup + self-revival)
   workflow_dispatch:          # manual run from the Actions tab
   repository_dispatch:        # optional external trigger (cron-job.org etc.)
     types: [collect]
@@ -20,7 +20,7 @@ permissions:
 jobs:
   collect:
     runs-on: ubuntu-latest
-    timeout-minutes: 60
+    timeout-minutes: 150      # covers the collector plus the wait for the next slot
 
     steps:
       - name: Check out repo
@@ -56,22 +56,18 @@ jobs:
           echo "Push failed after 5 attempts"
           exit 1
 
-      # Self-chain: wait until the next :07 or :37 UTC, then start a new run.
-      # Runs even if the collector failed, so one bad run doesn't stop the loop.
-      # To stop the loop: repo Settings > Secrets and variables > Actions >
-      # Variables > add CHAIN = off
+      # Self-chain: wait until the next 00:07, 02:07, 04:07 ... UTC, then start
+      # a new run. Runs even if the collector failed, so one bad run doesn't
+      # break the loop. To stop it: add a repo variable CHAIN = off
+      # (Settings > Secrets and variables > Actions > Variables).
       - name: Schedule next run
         if: ${{ always() && vars.CHAIN != 'off' }}
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
           now=$(date -u +%s)
-          min=$(date -u +%-M)
-          sec=$(date -u +%-S)
-          if   [ "$min" -lt 7 ];  then wait=$(( (7  - min) * 60 - sec ))
-          elif [ "$min" -lt 37 ]; then wait=$(( (37 - min) * 60 - sec ))
-          else                         wait=$(( (67 - min) * 60 - sec ))
-          fi
+          next=$(( ( (now - 420) / 7200 + 1 ) * 7200 + 420 ))
+          wait=$(( next - now ))
           [ "$wait" -lt 60 ] && wait=60
           echo "Sleeping ${wait}s until next slot"
           sleep "$wait"
