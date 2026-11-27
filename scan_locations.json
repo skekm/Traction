@@ -1,0 +1,82 @@
+[
+   {
+      "name": "Alnabru",
+      "code": "ALB",
+      "kind": "Stasjon"
+   },
+   {
+      "name": "Bergen",
+      "code": "BRG",
+      "kind": "Stasjon"
+   },
+   {
+      "name": "Trondheim S",
+      "code": "TND",
+      "kind": "Stasjon"
+   },
+   {
+      "name": "Narvik",
+      "code": "NK",
+      "kind": "Stasjon"
+   },
+   {
+      "name": "Bjørnefjell Grense",
+      "code": "BFG",
+      "kind": "Stoppested"
+   },
+   {
+      "name": "Bodø",
+      "code": "BO",
+      "kind": "Stasjon"
+   },
+   {
+      "name": "Orstad",
+      "code": "ORS",
+      "kind": "Stasjon"
+   },
+   {
+      "name": "Charlottenberg Grense",
+      "code": "CGG",
+      "kind": "Stoppested"
+   },
+   {
+      "name": "Hønefoss",
+      "code": "HFS",
+      "kind": "Stasjon"
+   },
+   {
+      "name": "Heimdal",
+      "code": "HMD",
+      "kind": "Stasjon"
+   },
+   {
+      "name": "Sørli",
+      "code": "SRI",
+      "kind": "Stasjon"
+   },
+   {
+      "name": "Gardermoen",
+      "code": "GAR",
+      "kind": "Stasjon"
+   },
+   {
+      "name": "Grorud",
+      "code": "GRO",
+      "kind": "Stasjon"
+   },
+   {
+      "name": "Kongsvinger",
+      "code": "KVG",
+      "kind": "Stasjon"
+   },
+   {
+      "name": "Loenga",
+      "code": "LOE",
+      "kind": "Stoppested"
+   },
+   {
+      "name": "Sokna",
+      "code": "SOK",
+      "kind": "Stasjon"
+   }
+]
