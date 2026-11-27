@@ -10,16 +10,6 @@
       "kind": "Stasjon"
    },
    {
-      "name": "Trondheim S",
-      "code": "TND",
-      "kind": "Stasjon"
-   },
-   {
-      "name": "Narvik",
-      "code": "NK",
-      "kind": "Stasjon"
-   },
-   {
       "name": "Bjørnefjell Grense",
       "code": "BFG",
       "kind": "Stoppested"
@@ -30,29 +20,9 @@
       "kind": "Stasjon"
    },
    {
-      "name": "Orstad",
-      "code": "ORS",
-      "kind": "Stasjon"
-   },
-   {
       "name": "Charlottenberg Grense",
       "code": "CGG",
       "kind": "Stoppested"
-   },
-   {
-      "name": "Hønefoss",
-      "code": "HFS",
-      "kind": "Stasjon"
-   },
-   {
-      "name": "Heimdal",
-      "code": "HMD",
-      "kind": "Stasjon"
-   },
-   {
-      "name": "Sørli",
-      "code": "SRI",
-      "kind": "Stasjon"
    },
    {
       "name": "Gardermoen",
@@ -65,8 +35,38 @@
       "kind": "Stasjon"
    },
    {
+      "name": "Heimdal",
+      "code": "HMD",
+      "kind": "Stasjon"
+   },
+   {
+      "name": "Holmen Ss",
+      "code": "HMS",
+      "kind": "Stasjon"
+   },
+   {
+      "name": "Hove",
+      "code": "HVE",
+      "kind": "Stasjon"
+   },
+   {
+      "name": "Hønefoss",
+      "code": "HFS",
+      "kind": "Stasjon"
+   },
+   {
+      "name": "KOG",
+      "code": "KOG",
+      "kind": "Stasjon"
+   },
+   {
       "name": "Kongsvinger",
       "code": "KVG",
+      "kind": "Stasjon"
+   },
+   {
+      "name": "Koppang",
+      "code": "KOP",
       "kind": "Stasjon"
    },
    {
@@ -75,8 +75,53 @@
       "kind": "Stoppested"
    },
    {
+      "name": "Mo i Rana",
+      "code": "MO",
+      "kind": "Stasjon"
+   },
+   {
+      "name": "Narvik",
+      "code": "NK",
+      "kind": "Stasjon"
+   },
+   {
+      "name": "Orstad",
+      "code": "ORS",
+      "kind": "Stasjon"
+   },
+   {
+      "name": "Sarpsborg",
+      "code": "SBO",
+      "kind": "Stasjon"
+   },
+   {
       "name": "Sokna",
       "code": "SOK",
+      "kind": "Stasjon"
+   },
+   {
+      "name": "Sundland",
+      "code": "SUD",
+      "kind": "Stasjon"
+   },
+   {
+      "name": "Sørli",
+      "code": "SRI",
+      "kind": "Stasjon"
+   },
+   {
+      "name": "Trondheim S",
+      "code": "TND",
+      "kind": "Stasjon"
+   },
+   {
+      "name": "Åndalsnes",
+      "code": "ÅND",
+      "kind": "Stasjon"
+   },
+   {
+      "name": "Ørtfjell",
+      "code": "ØFJ",
       "kind": "Stasjon"
    }
 ]
